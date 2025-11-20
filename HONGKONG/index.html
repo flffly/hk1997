@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1997香港回归 - 互动网页</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>1997年7月1日 · 香港回归</h1>
+    <p>一段历史的转折点，一次民族的团圆</p >
+  </div>
+</header>
+
+
+  <main>
+    <section id="timeline" class="timeline">
+      <!-- 时间轴内容 -->
+    </section>
+
+    <section id="interactive" class="interactive">
+      <!-- 互动区域 -->
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+<div class="timeline-item" onclick="toggleDetail(this)">
+  <h3>1997年7月1日</h3>
+  <p>香港回归中国</p >
+  <div class="detail" style="display:none;">详细内容...</div>
+</div>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+  <!-- 底部横幅 -->
+<!-- 周年小卡片 -->
+<div class="anniversary-card">
+  <img src="images/anniversary.jpg" alt="1997-2025" />
+</div>
+
+
+<!-- 香港回归庆典晚会 -->
+<section id="gala" class="gala-section">
+  <h2>🎉 香港回归庆典晚会</h2>
+  <p class="gala-subtitle">2025年6月30日 19:00 隆重播出</p >
+
+  <div class="gala-grid">
+    <!-- 左侧图 -->
+    <div class="gala-poster">
+      <img src="images/gala-poster.jpg" alt="庆典节目单">
+      <p class="scan-tip">扫码观看直播 →</p >
+    </div>
+
+    <!-- 右侧节目单 -->
+    <div class="gala-program">
+      <h3>节目单</h3>
+      <ul>
+        <li>《东方之珠》<span>王菲、李宇春</span></li>
+        <li>《紫荆花开》<span>容祖儿</span></li>
+        <li>《我的中国心》<span>叶倩文</span></li>
+        <li>《始终有你》<span>林子祥、谭咏麟</span></li>
+        <li>《歌唱祖国》<span>刘德华</span></li>
+      </ul>
+      <a class="gala-btn" href=" " onclick="alert('跳转直播页（可替换成真实链接）')">立即预约</a >
+    </div>
+  </div>
+
+<!-- 模拟社交媒体反应 -->
+<section id="social" class="social-section">
+  <h2>微博及Twitter热评精选</h2>
+
+  <!-- 微博风 -->
+  <div class="weibo">
+    <div class="post" id="wb1">
+      <img src="https://i.pravatar.cc/40?img=11" class="avatar"/>
+      <div class="content">
+        <div class="name">香港小记 <span class="time">07-01 00:03 来自 微博 weibo.com</span></div>
+        <div class="text">英国旗降下，五星红旗升起！这一刻，等了 156 年！#香港回归# 🇭🇰</div>
+        <div class="actions">
+          <button class="like-btn" onclick="like(this)">👍 点赞 2.1万</button>
+          <button class="repost-btn">🔁 转发 8千</button>
+          <button class="comment-btn">💬 评论 3千</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="post" id="wb2">
+      <img src="https://i.pravatar.cc/40?img=16" class="avatar"/>
+      <div class="content">
+        <div class="name">北京学生 <span class="time">07-01 00:05 来自 微博 weibo.com</span></div>
+        <div class="text">驻港部队进城了！坦克好帅！#一国两制#</div>
+        <div class="actions">
+          <button class="like-btn" onclick="like(this)">👍 点赞 5.6万</button>
+          <button class="repost-btn">🔁 转发 2.3万</button>
+          <button class="comment-btn">💬 评论 9千</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Twitter 风 -->
+  <div class="twitter">
+    <div class="tweet" id="tw1">
+      <img src="https://i.pravatar.cc/40?img=20" class="avatar"/>
+      <div class="content">
+        <div class="name">CNN Breaking <span class="handle">@cnnbrk</span> <span class="time">· Jul 1, 1997</span></div>
+        <div class="text">Britain hands Hong Kong back to China after 156 years of colonial rule. <span class="hashtag">#HongKong1997</span></div>
+        <div class="actions">
+          <button class="like-btn" onclick="like(this)">❤ 21K</button>
+          <button class="repost-btn">🔁 7.2K</button>
+          <button class="comment-btn">💬 3.1K</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户互动投票 -->
+<section id="vote-section" class="vote-section">
+  <h3>📊 你怎么看香港回归？</h3>
+
+  <form id="voteForm">
+    <label><input type="radio" name="option" value="A"> 热血沸腾，民族大团圆！</label><br>
+    <label><input type="radio" name="option" value="B"> 历史必然，一国两制开创性举措</label><br>
+    <label><input type="radio" name="option" value="C"> 当时还小，现在才懂意义</label><br>
+    <label><input type="radio" name="option" value="D"> 不太了解，想多学习</label><br>
+    <button type="submit">投票</button>
+  </form>
+
+  <div id="result" class="result hidden">
+    <p>谢谢参与！实时结果：</p >
+    <div class="bar-wrap">
+      <div class="bar" data-opt="A"><span class="label">A</span><span class="pct"></span></div>
+      <div class="bar" data-opt="B"><span class="label">B</span><span class="pct"></span></div>
+      <div class="bar" data-opt="C"><span class="label">C</span><span class="pct"></span></div>
+      <div class="bar" data-opt="D"><span class="label">D</span><span class="pct"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 重置投票按钮 -->
+<button id="resetBtn" style="position:fixed;bottom:10px;right:10px;font-size:12px;opacity:.3">RESET</button>
