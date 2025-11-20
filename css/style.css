@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: linear-gradient(to bottom, #001f3f, #003366);
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-left: 5px solid #ffcc00;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* 社交媒体区域 */
+.social-section {
+  padding: 40px 20px;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.social-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* 微博风 */
+.weibo,
+.twitter {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post,
+.tweet {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.handle {
+  color: #666;
+  font-size: 14px;
+}
+
+.time {
+  color: #999;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.text {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #666;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.actions button:hover {
+  color: #e0245e;
+}
+
+.liked {
+  color: #e0245e !important;
+}
+
+/* 投票模块 */
+.vote-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vote-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.vote-section label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.vote-section button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vote-section button:hover {
+  background: #ffd633;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result.hidden {
+  display: none;
+}
+
+.bar-wrap {
+  margin-top: 10px;
+}
+
+.bar {
+  height: 28px;
+  background: #ddd;
+  margin: 8px 0;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(to right, #ffcc00, #ffa500);
+  width: 0;
+  transition: width 1s ease;
+}
+
+.bar .label {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  font-weight: bold;
+  color: #000;
+}
+
+.bar .pct {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  font-size: 14px;
+  color: #000;
+}
+
+.hero {
+  position: relative;
+  height: 300px;                   /* 想全屏就 100vh */
+  background: url("../images/banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero::before {                    /* 半透明黑色遮罩，让文字更清楚 */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-inner {
+  position: relative;              /* 高于遮罩层 */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 { font-size: 48px; margin: 0 0 10px; }
+.hero p { font-size: 20px; margin: 0; }
+
+/* 庆典晚会专区 */
+.gala-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.gala-section h2 { font-size: 32px; margin: 0 0 10px; }
+.gala-subtitle { font-size: 18px; color: #666; margin-bottom: 25px; }
+
+.gala-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gala-poster img {
+  width: 260px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.scan-tip {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+.gala-program {
+  text-align: left;
+  max-width: 320px;
+}
+
+.gala-program h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  border-left: 4px solid #ffcc00;
+  padding-left: 8px;
+}
+
+.gala-program ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.gala-program li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.gala-program span {
+  float: right;
+  color: #555;
+}
+
+.gala-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.gala-btn:hover { background: #ffd633; }
+
+.gala-banner {
+  margin-top: 30px;
+}
+
+.gala-banner img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+/* 手机端自适应 */
+@media(max-width:600px){
+  .gala-grid{flex-direction:column;align-items:center;}
+  .gala-program{max-width:100%;margin-top:20px;}
+}
+
+/* 让周年横幅变小 */
+/* 白底小卡片 - 复刻图四 */
+.anniversary-card {
+  width: 520px;                 /* 想再小就 240px */
+  margin: 30px auto 0;          /* 居中 + 上间距 */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;             /* 圆角裁剪 */
+  padding: 10px;                /* 白边 */
+}
+
+.anniversary-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;           /* 图片也带一点圆角 */
+}
+
